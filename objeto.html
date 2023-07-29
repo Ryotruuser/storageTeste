@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #dados{
+            display: flex;
+            flex-direction: column;
+            width: 200px;
+            border: 2px solid red;
+            padding: 10px;
+            box-shadow: 5px 10px 5px 0px rgba(0,0,0,0.75);
+            -webkit-box-shadow: 5px 10px 5px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: 5px 10px 5px 0px rgba(0,0,0,0.75);
+        }
+
+        #dados label{
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 4px;
+            margin-top: 4px;
+        }
+
+        #dados input{
+            height: 20px;
+        }
+        #dados select{
+            height: 20px;
+        }
+
+        /* CSS */
+        .btn{
+        background-color: #EA4C89;
+        border-radius: 8px;
+        border-style: none;
+        box-sizing: border-box;
+        color: #FFFFFF;
+        cursor: pointer;
+        display: inline-block;
+        font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        height: 40px;
+        width: 200px;
+        line-height: 20px;
+        list-style: none;
+        margin-top: 5px;
+        margin-left: 15px;
+        outline: none;
+        padding: 10px 16px;
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+        transition: color 100ms;
+        vertical-align: baseline;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        }
+
+        .btn,.btn {
+        background-color: #F082AC;
+        }
+
+        #mostrar{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+        .table{
+            border: 1px solid red;
+            width: 200px;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="" id="dados">
+        <label for="name">Nome</label>
+        <input id="name" type="text">
+
+        <label for="nasc">Ano de nascimento</label>
+        <input id="nasc" type="number">
+
+        <label for="email">Email</label>
+        <input id="email" type="email" required>
+
+        <label for="cpf">Cpf</label>
+        <input id="cpf" type="number" required>
+
+        <label for="Sexo">Sexo</label>
+        <select id="sexo" value="">   
+            <option value="">Selecionar</option>
+            <option value="m">Masculino</option>
+            <option value="f">Feminino</option>
+            <option value="nb">Nao Binario</option>
+        </select>
+        
+        
+    </form>
+    <button onclick="getData()" class="btn">Adicionar</button>
+    <br>
+    <button onclick="listarData()" class="btn" style="background: green;">Listar usuarios</button>
+    <hr>
+
+
+    
+</body>
+<script>
+
+    class Pessoa{
+        constructor(nome, nasc, email, cpf, sexo){
+            this.nome = nome
+            this.nasc = nasc
+            this.email = email
+            this.cpf = cpf
+            this.sexo = sexo     
+            this.idade = 2023 - this.nasc 
+        }
+
+        falar(){
+            console.log(`Ola me chamo ${this.nome} e tenho ${this.idade} anos `)
+        }
+    }
+
+    let pessoas = []
+
+    getData = () => {
+        
+        var data = document.getElementById('dados')
+        let user = new Pessoa(
+            data.name.value, 
+            data.nasc.value, 
+            data.email.value,
+            data.cpf.value, 
+            data.sexo.value)
+
+        pessoas.push(user)
+
+        data.name.value = ""
+        data.nasc.value = ""
+        data.email.value = ""
+        data.cpf.value = ""
+        data.sexo.value = ""
+        console.log(pessoas)
+    }
+
+    listarData = () => {
+
+        if(pessoas.length === 0 ){
+            alert("Favor adicionar ao menos um usuario")
+        }
+
+        for(let i = 0; i < 20; i++){
+
+            document.write(
+                `
+                <hr>
+                <h3 class="table">
+                    Nome: ${pessoas[i].nome} <br>
+                    Idade: ${pessoas[i].idade}<br>
+                    Email: ${pessoas[i].email}<br>
+                    Sexo: ${pessoas[i].sexo = "m" ? "Masculino" : "Feminino"}<br>
+                    Cpf: ${pessoas[i].cpf}
+                </h3>  
+                <hr>
+                `)
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap');
+[fonte]{
+    font-family: 'Rajdhani', sans-serif;
+}
+body{
+    background: rgb(2,0,36);
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+    width: 400px;
+    padding: 50px;
+    margin-top: 5%;
+
+    /* From https://css.glass */
+    background: rgba(196, 213, 230, 0.09);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2.3px);
+    -webkit-backdrop-filter: blur(2.3px);
+    border: 1px solid rgba(196, 213, 230, 0.28);
+}
+
+.login{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.login input{
+    border-radius: 6px;
+    outline: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*something else */
+[mr-2]{
+    margin-right: 5px;
+}
+
+[mb]{
+    margin-bottom: 10px;
+}
+
+[white]{
+    color: white;
+}
