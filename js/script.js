@@ -9,7 +9,6 @@ class Usuario{
 
 let usuarios = []
 
-
 redirect = (value) =>{
     window.location.href = value
 }
@@ -30,6 +29,7 @@ logar = () =>{
     }
 
     if(permissao == 0){
+        window.location.href = "dashboard.html"
         alert('Login realizado com sucesso')
         login.value = ""
         pass.value = ""
@@ -37,19 +37,16 @@ logar = () =>{
         alert('Login/senha incorretos')
     }
 
-
-  
-
-    
-
 }
 
 registrar = () => {
+    
     let name = document.getElementById("name")
     let email = document.getElementById("email")
     let login = document.getElementById("login") 
     let pass = document.getElementById("pass")
     let cpass = document.getElementById("cpass")
+    let confirm;
 
 
     if(pass.value !== cpass.value){

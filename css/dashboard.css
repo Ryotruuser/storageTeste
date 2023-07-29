@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap');
+[fonte]{
+    font-family: 'Rajdhani', sans-serif;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background: rgb(2,0,36);
+}
+.container{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-areas:
+    "header header header"
+    "aleft main aright"
+    "footer footer footer"
+    ;
+}
+
+/*header*/
+
+header{
+    
+    background: blue;
+    grid-area: header;
+    border-radius: 0 !important;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.61);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+
+}
+.logo{
+    margin: 0 0 0 10px;
+    font-size: 3em;
+    
+}
+.menuTop{
+    display: flex;
+    flex-direction: row;
+}
+.menuTop a{
+    padding: 13px;
+    text-decoration: none;
+    color: black;
+    margin-left: 5px;
+}
+.menuTop a:hover{
+    color:  white;
+}
+
+#perfil{
+    height: 50px;
+    width: 50px;
+    margin-right: 100px;
+    background: gray;
+    border: 1px solid black;
+    cursor: pointer;
+}
+.dropdown {
+    display: none;
+    background-color: #f1f1f1;
+    margin-top: 50px;
+    margin-left: -50px;
+    min-width: 150px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    position: absolute;
+    z-index: 1;
+
+}
+.dropdown a{
+    display: block;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: black;
+}
+.dropdown a:hover{
+    background-color: #d6cbcb;
+}
+
+/*main*/
+main{
+    background: rgba(255, 255, 255, 0.8);
+    grid-area: main;
+    display: flex;
+    margin: 80px 0 10px 300px;
+    border-radius: 100px 20px 0px 0;
+    width:800px;
+    flex-direction: column;
+    align-items: center;
+
+    
+}
+
+.post{
+    margin: 20px 0 20px 0 ;
+    padding: 20px;
+    display: flex;
+    width: 600px;
+    flex-direction: column;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.43);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.3px);
+    -webkit-backdrop-filter: blur(8.3px);
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    box-shadow: 7px 4px 18px 0px rgba(0,0,0,0.75);
+    }
+.postTitle{
+    margin-bottom: 10px;
+}
+
+.postVisual{
+    width: 600px;
+    outline: 1px solid black;
+    box-shadow: 10px 4px 12px -10px rgba(0,0,0,0.75);
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.aleft{
+    background: aqua;
+    grid-area: aleft;
+    margin: 80px 10px 10px 0;
+}
+.aright{
+    background: salmon;
+    grid-area: aright;
+    margin: 80px 0 10px 10px;
+}   
+footer{
+    background: yellow;
+    grid-area: footer;
+}
