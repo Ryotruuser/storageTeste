@@ -44,7 +44,11 @@ header{
 .logo{
     margin: 0 0 0 10px;
     font-size: 3em;
+    cursor: pointer;
     
+}
+.logo:hover{
+    color: white;
 }
 .menuTop{
     display: flex;
@@ -100,10 +104,7 @@ main{
     width:800px;
     flex-direction: column;
     align-items: center;
-
-    
 }
-
 .post{
     margin: 20px 0 20px 0 ;
     padding: 20px;
@@ -120,47 +121,121 @@ main{
     box-shadow: 7px 4px 18px 0px rgba(0,0,0,0.75);
     }
 .postTitle{
-    margin-bottom: 10px;
+    margin-bottom: 0px;
+    cursor: pointer;
 }
 
+.postTitle:hover{
+    color: rgb(126, 125, 125);
+}
 .postVisual{
     width: 600px;
     outline: 1px solid black;
     box-shadow: 10px 4px 12px -10px rgba(0,0,0,0.75);
     border-radius: 5px;
+    cursor: pointer;
+    transition: transform .2s;
+}
+.postVisual:hover{
+    transform: scale(1.02);
+    outline: none;
+}
+.postMoreInfo{
+    color: brown;
+    text-decoration: none;
+}
+.postMoreInfo:hover{
+    color: rgb(110, 69, 69);
+}
+.postDivider{
+    color: black;
+    width: 600px;
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*left menu*/
 
 .aleft{
-    background: aqua;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    width: 250px;
     grid-area: aleft;
+    border-radius: 10px 50px 50px 0px;
+    height: 750px;
     margin: 80px 10px 10px 0;
+    background: rgba(255, 255, 255, 0.76);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.1px);
+    -webkit-backdrop-filter: blur(7.1px);
+    border: 1px solid rgba(255, 255, 255, 0.23);
 }
+.menuLeft{
+    display: flex;
+    flex-direction: column;
+    
+}
+.menuLeft a{
+    color: black;
+    text-decoration: none;
+    padding: 30px;
+    min-width: 190px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.menuLeft a:last-of-type{
+    border-bottom: none;
+}
+.menuLeft a:hover{
+    background: rgba(0, 0, 0, 0.035);
+    border-radius: 10px 10px 10px 0;
+}
+
+/*right menu*/
+
 .aright{
-    background: salmon;
+    display: flex;
+    flex-direction: column;
     grid-area: aright;
-    margin: 80px 0 10px 10px;
-}   
+    width: 70px;
+    position: fixed;
+    right: 0;
+    height: 450px;
+    margin: 80px 0 10px 160px;
+    background: rgba(255, 255, 255, 0.61);
+    border-radius: 16px  0 0 16px ;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+.menuRight{
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0 0 0 ;
+}
+.menuRight a{
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.sm{
+    width: 50px;
+}
+.sm:hover{
+    margin: 0 0 0 2px;
+}
+
+/*footer*/
 footer{
-    background: yellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     grid-area: footer;
+    background: rgba(255, 255, 255, 0.61);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }
