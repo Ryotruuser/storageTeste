@@ -64,6 +64,12 @@ header{
     color:  white;
 }
 
+.nomePerfil{
+    position: absolute;
+    right: 160px;
+    top: 16px;
+}
+
 #perfil{
     height: 50px;
     width: 50px;

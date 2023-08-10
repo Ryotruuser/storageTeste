@@ -6,3 +6,5 @@ closeMenu = () => {
     let menuDropdown = document.getElementsByClassName("dropdown")
     menuDropdown[0].style.display = "none"
 }
+
+let profileName = document.getElementById('profileName')
